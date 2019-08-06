@@ -4,7 +4,7 @@ class RoundedButton extends StatelessWidget {
   const RoundedButton({
     this.thisColor,
     this.buttonTitle,
-    this.onPressed,
+    @required this.onPressed,
   });
 
   final Color thisColor;
@@ -25,6 +25,9 @@ class RoundedButton extends StatelessWidget {
           height: 42.0,
           child: Text(
             buttonTitle,
+            style: TextStyle(
+              color: Colors.white,
+            ),
           ),
         ),
       ),
